@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World in One Day — Thursday 19 November 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1024px; height: 1024px; }
+  body {
+    font-family: 'Liberation Sans', 'Helvetica Neue', Arial, 'DejaVu Sans', sans-serif;
+    background: #f7f3ea; color: #111111; padding: 10px 12px;
+    display: flex; flex-direction: column; gap: 6px; overflow: hidden;
+  }
+  .serif { font-family: Georgia, 'DejaVu Serif', 'Liberation Serif', serif; }
+  .kicker { font-size: 10px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: #b91c1c; }
+  .blue { color: #1d4ed8; }
+  .rule { border: none; border-top: 2px solid #111111; }
+
+  /* ---------- masthead ---------- */
+  header { height: 88px; flex: none; text-align: center; overflow: hidden; }
+  header h1 { font-family: Georgia, 'DejaVu Serif', 'Liberation Serif', serif; font-size: 47px; line-height: 50px; font-weight: 900; letter-spacing: 1px; }
+  header .date { font-size: 24px; font-weight: 800; letter-spacing: 4px; color: #b91c1c; line-height: 26px; }
+  header .sub { font-size: 12px; letter-spacing: 2.5px; color: #444; margin-top: 1px; }
+
+  /* ---------- hero ---------- */
+  .hero { height: 228px; flex: none; display: flex; border-top: 3px solid #111; border-bottom: 2px solid #111; overflow: hidden; }
+  .hero .art { width: 430px; flex: none; }
+  .hero .art svg { display: block; width: 430px; height: 228px; }
+  .hero .txt { flex: 1; padding: 14px 16px 10px 18px; overflow: hidden; }
+  .hero h2 { font-family: Georgia, 'DejaVu Serif', serif; font-size: 34px; line-height: 37px; font-weight: 900; }
+  .hero h2 .accent { color: #b91c1c; }
+  .hero p { font-size: 15.5px; line-height: 21px; margin-top: 9px; color: #222; }
+  .hero .tag { font-size: 10px; font-weight: 700; letter-spacing: 1.6px; color: #b91c1c; text-transform: uppercase; }
+
+  /* ---------- secondary row ---------- */
+  .secondary { height: 150px; flex: none; display: flex; gap: 10px; overflow: hidden; }
+  .sec { flex: 1; border-top: 2px solid #111; padding-top: 6px; overflow: hidden; }
+  .sec svg { display: block; width: 100%; height: 58px; }
+  .sec h3 { font-size: 13.5px; line-height: 16.5px; font-weight: 800; margin-top: 5px; }
+  .sec p { font-size: 11px; line-height: 13.5px; color: #333; margin-top: 3px; }
+
+  /* ---------- small panels ---------- */
+  .small { height: 168px; flex: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px 10px; overflow: hidden; }
+  .sm { border-top: 1px solid #999; padding-top: 5px; overflow: hidden; }
+  .sm .row { display: flex; gap: 7px; align-items: flex-start; }
+  .sm svg { flex: none; width: 30px; height: 30px; }
+  .sm h4 { font-size: 12px; line-height: 14.5px; font-weight: 800; }
+
+  /* ---------- index ---------- */
+  .index { height: 208px; flex: none; border-top: 2px solid #111; padding-top: 5px; overflow: hidden; }
+  .index h5 { font-size: 11px; letter-spacing: 2px; color: #b91c1c; margin-bottom: 4px; }
+  .index .cols { display: flex; gap: 22px; }
+  .index ul { list-style: none; flex: 1; }
+  .index li { font-size: 11px; line-height: 12.5px; padding: 1px 0; white-space: nowrap; overflow: hidden; }
+  .index li b { display: inline-block; width: 58px; font-size: 8.5px; letter-spacing: 0.5px; color: #1d4ed8; font-weight: 800; }
+
+  /* ---------- bottom strip ---------- */
+  .bottom { height: 116px; flex: none; display: flex; gap: 14px; border-top: 2px solid #111; padding-top: 7px; overflow: hidden; }
+  .mapbox { width: 296px; flex: none; }
+  .mapbox h6, .tlbox h6, .numbox h6 { font-size: 10px; letter-spacing: 1.8px; color: #b91c1c; margin-bottom: 3px; }
+  .mapbox svg { display: block; width: 296px; height: 88px; }
+  .tlbox { flex: 1; }
+  .tlbox svg { display: block; width: 100%; height: 88px; }
+  .numbox { width: 250px; flex: none; background: #111; color: #f7f3ea; padding: 8px 12px; }
+  .numbox h6 { color: #f7f3ea; }
+  .numbox .nums { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; }
+  .numbox .n b { display: block; font-size: 15px; color: #ffd166; line-height: 17px; }
+  .numbox .n span { font-size: 9px; line-height: 10.5px; color: #ddd; white-space: nowrap; }
+
+  footer { height: 14px; flex: none; font-size: 10px; letter-spacing: 0.4px; color: #555; text-align: center; overflow: hidden; }
+  #diag { position: absolute; left: -9999px; top: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>THE WORLD IN ONE DAY</h1>
+  <div class="date">THURSDAY 19 NOVEMBER 2026</div>
+  <div class="sub">37 STORIES &nbsp;·&nbsp; 7 REGIONS &nbsp;·&nbsp; ONE IMAGE</div>
+</header>
+
+<section class="hero">
+  <div class="art">
+    <svg viewBox="0 0 430 228" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2b1055"/><stop offset="0.45" stop-color="#7597de"/>
+          <stop offset="0.62" stop-color="#ff7e5f"/><stop offset="0.8" stop-color="#feb47b"/>
+          <stop offset="1" stop-color="#ff9a8b"/>
+        </linearGradient>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ff8c69"/><stop offset="1" stop-color="#3b1d5e"/>
+        </linearGradient>
+      </defs>
+      <rect width="430" height="228" fill="url(#sky)"/>
+      <circle cx="215" cy="128" r="42" fill="#ffd166" opacity="0.95"/>
+      <circle cx="215" cy="128" r="56" fill="#ffd166" opacity="0.25"/>
+      <g fill="#1a0b2e">
+        <rect x="0" y="120" width="26" height="48"/><rect x="30" y="100" width="20" height="68"/>
+        <rect x="54" y="126" width="30" height="42"/><rect x="88" y="92" width="18" height="76"/>
+        <rect x="110" y="118" width="26" height="50"/><rect x="140" y="104" width="16" height="64"/>
+        <rect x="292" y="108" width="18" height="60"/><rect x="314" y="96" width="24" height="72"/>
+        <rect x="342" y="122" width="22" height="46"/><rect x="368" y="102" width="18" height="66"/>
+        <rect x="390" y="124" width="40" height="44"/>
+      </g>
+      <g fill="#ffd166" opacity="0.85">
+        <rect x="34" y="108" width="4" height="5"/><rect x="42" y="118" width="4" height="5"/>
+        <rect x="92" y="100" width="4" height="5"/><rect x="318" y="104" width="4" height="5"/>
+        <rect x="372" y="110" width="4" height="5"/><rect x="118" y="126" width="4" height="5"/>
+      </g>
+      <rect y="168" width="430" height="60" fill="url(#sea)"/>
+      <g stroke="#ffd166" stroke-width="2" opacity="0.7">
+        <line x1="150" y1="182" x2="280" y2="182"/><line x1="120" y1="196" x2="310" y2="196"/>
+        <line x1="170" y1="210" x2="260" y2="210"/>
+      </g>
+      <g fill="#12061f">
+        <path d="M40 168 q4 -34 2 -52 q14 4 20 12 q-4 -16 -18 -20 q-2 -14 -6 -16 q2 12 -2 16 q-14 -4 -22 6 q10 2 16 8 q-8 2 -12 8 q10 0 14 4 q-2 20 -2 34 z"/>
+        <path d="M398 168 q4 -30 2 -46 q12 4 18 10 q-4 -14 -16 -18 q-2 -12 -5 -14 q2 10 -2 14 q-12 -4 -20 5 q9 2 14 7 q-7 2 -10 7 q9 0 12 3 q-2 18 -2 32 z"/>
+      </g>
+      <text x="215" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="900" fill="#ffffff" letter-spacing="3">VICE CITY</text>
+      <text x="215" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#ffe9a8" letter-spacing="4">NEON · PALMS · OCEAN DRIVE</text>
+    </svg>
+  </div>
+  <div class="txt">
+    <div class="tag">The biggest story of the day &nbsp;·&nbsp; Games</div>
+    <h2 class="fit serif">After 13 years, <span class="accent">GTA VI</span> arrives — Vice City wakes up</h2>
+    <p class="fit">The long-awaited game begins its global rollout, first live in Australia and New Zealand as players finally return to Vice City — ending the longest wait in gaming history.</p>
+  </div>
+</section>
+
+<section class="secondary">
+  <div class="sec">
+    <svg viewBox="0 0 230 58" aria-hidden="true">
+      <rect width="230" height="58" fill="#eef2fb"/>
+      <g fill="#1d4ed8"><rect x="18" y="34" width="16" height="18"/><rect x="44" y="26" width="16" height="26"/><rect x="70" y="18" width="16" height="34"/><rect x="96" y="10" width="16" height="42"/></g>
+      <polyline points="18,36 52,28 78,18 104,8 150,4" fill="none" stroke="#b91c1c" stroke-width="3"/>
+      <text x="128" y="34" font-family="Arial" font-size="15" font-weight="800" fill="#111">$81.3bn</text>
+      <text x="128" y="50" font-family="Arial" font-size="10" fill="#444">biggest IPO ever</text>
+    </svg>
+    <h3 class="fit">Anthropic's $81.3bn listing is the biggest IPO in history</h3>
+    <p class="fit">Shares priced at $83; the debut values the AI firm above $1.4 trillion.</p>
+  </div>
+  <div class="sec">
+    <svg viewBox="0 0 230 58" aria-hidden="true">
+      <rect width="230" height="58" fill="#fdeeee"/>
+      <g fill="#111"><path d="M115 6 L150 20 L150 30 L145 30 L145 48 L85 48 L85 30 L80 30 L80 20 Z"/><rect x="108" y="34" width="14" height="14" fill="#fdeeee"/></g>
+      <g fill="#b91c1c"><rect x="60" y="46" width="110" height="4"/><rect x="70" y="52" width="90" height="3"/></g>
+      <text x="115" y="16" text-anchor="middle" font-family="Arial" font-size="9" font-weight="800" fill="#fff">★</text>
+    </svg>
+    <h3 class="fit">Jeffries nominated to lead the House — a first for a Black Speaker</h3>
+    <p class="fit">Democrats choose Hakeem Jeffries; he is set to become the first African-American Speaker.</p>
+  </div>
+  <div class="sec">
+    <svg viewBox="0 0 230 58" aria-hidden="true">
+      <rect width="230" height="58" fill="#0b1026"/>
+      <g fill="#fff"><circle cx="20" cy="12" r="1.4"/><circle cx="52" cy="22" r="1.2"/><circle cx="88" cy="10" r="1.5"/><circle cx="140" cy="16" r="1.2"/><circle cx="180" cy="10" r="1.4"/><circle cx="210" cy="24" r="1.2"/><circle cx="120" cy="8" r="1.2"/></g>
+      <circle cx="196" cy="34" r="9" fill="#ffd166"/>
+      <g stroke="#9db4ff" stroke-width="2" fill="none"><path d="M30 44 L60 36 L96 40 L130 30 L160 34"/></g>
+      <path d="M60 36 l14 -4 l4 8 l-14 4 z" fill="#c7d2fe"/>
+      <text x="14" y="54" font-family="Arial" font-size="10" font-weight="700" fill="#c7d2fe">1 LIGHT-DAY FROM EARTH</text>
+    </svg>
+    <h3 class="fit">Voyager 1 crosses one light-day from Earth</h3>
+    <p class="fit">Fifty years after launch, NASA confirms the probe's milestone on 19 November.</p>
+  </div>
+  <div class="sec">
+    <svg viewBox="0 0 230 58" aria-hidden="true">
+      <rect width="230" height="58" fill="#fdf6e3"/>
+      <path d="M20 44 L70 14 L120 34 L170 10 L215 30 L215 58 L20 58 Z" fill="#e8d9a8" stroke="#b91c1c" stroke-width="2"/>
+      <line x1="70" y1="14" x2="70" y2="58" stroke="#b91c1c" stroke-width="2" stroke-dasharray="4 3"/>
+      <text x="76" y="26" font-family="Arial" font-size="9" font-weight="800" fill="#b91c1c">YELLOW LINE</text>
+      <text x="20" y="54" font-family="Arial" font-size="9" font-weight="700" fill="#111">CENTRAL GAZA</text>
+    </svg>
+    <h3 class="fit">Israeli troops push into central Gaza in a rare ground move</h3>
+    <p class="fit">Four allies jointly press Israel to let aid reach flooded Gaza.</p>
+  </div>
+</section>
+
+<section class="small">
+  <div class="sm"><div class="row">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#dbeafe"/><path d="M2 22 Q15 8 28 22" stroke="#1d4ed8" stroke-width="2.5" fill="none"/><line x1="2" y1="24" x2="28" y2="24" stroke="#111" stroke-width="2"/><line x1="8" y1="18" x2="8" y2="24" stroke="#111" stroke-width="1.5"/><line x1="15" y1="15" x2="15" y2="24" stroke="#111" stroke-width="1.5"/><line x1="22" y1="18" x2="22" y2="24" stroke="#111" stroke-width="1.5"/></svg>
+    <h4 class="fit">Ukraine strike drops a span of the Crimean Bridge</h4>
+  </div><p style="font-size:10.5px;color:#333;margin-top:3px" class="fit">Traffic suspended after the crossing is hit.</p></div>
+  <div class="sm"><div class="row">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#fee2e2"/><path d="M15 3 L26 7 V15 Q26 23 15 27 Q4 23 4 15 V7 Z" fill="#b91c1c"/><path d="M10 15 l4 4 l7 -8" stroke="#fff" stroke-width="2.5" fill="none"/></svg>
+    <h4 class="fit">Kuwait says it foiled the first Iranian attack in two months</h4>
+  </div><p style="font-size:10.5px;color:#333;margin-top:3px" class="fit">Comes after US strikes on Qeshm Island.</p></div>
+  <div class="sm"><div class="row">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#eef2fb"/><path d="M15 4 L15 24 M6 26 L24 26" stroke="#111" stroke-width="2"/><path d="M15 7 L8 11 M15 7 L22 11" stroke="#111" stroke-width="1.8"/><path d="M4 16 a4 4 0 0 0 8 0 z M18 16 a4 4 0 0 0 8 0 z" fill="#1d4ed8"/></svg>
+    <h4 class="fit">UN court rules in historic Rohingya genocide case</h4>
+  </div><p style="font-size:10.5px;color:#333;margin-top:3px" class="fit">The verdict in the Myanmar case is delivered.</p></div>
+  <div class="sm"><div class="row">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#fdf6e3"/><rect x="5" y="5" width="20" height="16" fill="none" stroke="#8a6d1b" stroke-width="2.5"/><circle cx="15" cy="12" r="4" fill="#f59e0b"/><path d="M8 18 Q15 13 22 18" stroke="#1d4ed8" stroke-width="2" fill="none"/></svg>
+    <h4 class="fit">Van Gogh sells for a record $190.4m after Nazi-era dispute</h4>
+  </div><p style="font-size:10.5px;color:#333;margin-top:3px" class="fit">A row over its history preceded the sale.</p></div>
+  <div class="sm"><div class="row">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#111"/><path d="M15 5 Q21 13 15 20 Q9 13 15 5" fill="#ffd166"/><path d="M12 22 h6 M13 25 h4" stroke="#ffd166" stroke-width="2"/></svg>
+    <h4 class="fit">US details $12bn in Venezuelan oil and mineral revenue</h4>
+  </div><p style="font-size:10.5px;color:#333;margin-top:3px" class="fit">Nearly a year after US forces captured Maduro.</p></div>
+  <div class="sm"><div class="row">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#eef2fb"/><rect x="7" y="8" width="16" height="12" fill="#fff" stroke="#111" stroke-width="1.8"/><line x1="7" y1="12" x2="23" y2="12" stroke="#111" stroke-width="1.2"/><rect x="12" y="4" width="6" height="4" fill="#b91c1c"/><path d="M11 15 l2 2 l4 -4" stroke="#1d4ed8" stroke-width="2" fill="none"/></svg>
+    <h4 class="fit">Israel's president turns to Eisenkot to form a government</h4>
+  </div><p style="font-size:10.5px;color:#333;margin-top:3px" class="fit">Bypassing Netanyahu for the next coalition.</p></div>
+  <div class="sm"><div class="row">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#fef3c7"/><circle cx="15" cy="15" r="11" fill="#ffd166" stroke="#8a6d1b" stroke-width="2"/><text x="15" y="20" text-anchor="middle" font-family="Arial" font-size="13" font-weight="900" fill="#111">€</text></svg>
+    <h4 class="fit">EU proposes a €45bn Ukraine loan, repaid from Russian reparations</h4>
+  </div><p style="font-size:10.5px;color:#333;margin-top:3px" class="fit">Kyiv would repay once Moscow pays up.</p></div>
+  <div class="sm"><div class="row">
+    <svg viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#dcfce7"/><path d="M4 20 Q10 12 15 16 Q20 20 26 12" stroke="#166534" stroke-width="2.5" fill="none"/><circle cx="4" cy="20" r="2.5" fill="#166534"/><circle cx="26" cy="12" r="2.5" fill="#b91c1c"/></svg>
+    <h4 class="fit">Carney recalibrates China ties, seeks the right US deal</h4>
+  </div><p style="font-size:10.5px;color:#333;margin-top:3px" class="fit">Canada's prime minister balances both powers.</p></div>
+</section>
+
+<section class="index">
+  <h5>THE DAY IN BRIEF — MORE FROM AROUND THE WORLD</h5>
+  <div class="cols">
+    <ul>
+      <li><b>US</b>Senators warn AI cyber threats outpacing defences</li>
+      <li><b>US</b>Peltola wins Alaska; Senate majority now 56–44</li>
+      <li><b>US</b>NSA classified internal network suffers outage</li>
+      <li><b>US</b>Trump announces major diesel imports from Russia</li>
+      <li><b>EUROPE</b>Minister: Mélenchon could win French presidency</li>
+      <li><b>EUROPE</b>Fourth weekend of cost-of-living protests in France</li>
+      <li><b>EUROPE</b>Hundreds of thousands protest in Prague</li>
+      <li><b>EUROPE</b>General strike disrupts Spain's ports, factories</li>
+      <li><b>EUROPE</b>Drought declared across 82% of England</li>
+      <li><b>MIDEAST</b>Saudi Arabia: danger passed in three southern cities</li>
+      <li><b>MIDEAST</b>Cocaine and millions of pills seized in eastern Libya</li>
+      <li><b>MIDEAST</b>Somalia accuses UAE of secretly building bases</li>
+    </ul>
+    <ul>
+      <li><b>ASIA</b>India and Japan hold 2+2 defence talks</li>
+      <li><b>ASIA</b>Japan exports jump 20.5% on chips</li>
+      <li><b>ASIA</b>Pakistan rooftop solar lifts solar share to 28%</li>
+      <li><b>ASIA</b>Australia jobless rate hits 4.9%, a five-year high</li>
+      <li><b>AFRICA</b>Ethiopia and Eritrea mass forces on their border</li>
+      <li><b>AFRICA</b>Nigerian troops kill 21 suspected ISWAP fighters</li>
+      <li><b>AFRICA</b>Ebola vaccines to be trialled in eastern DR Congo</li>
+      <li><b>WORLD</b>Pew: Islam set to be largest religion by 2035</li>
+      <li><b>WORLD</b>Markets fall: FTSE −1.3%, Hang Seng −1.93%</li>
+      <li><b>SCIENCE</b>Hippos roamed Arabian Desert 125,000 years ago</li>
+      <li><b>SCIENCE</b>New clue to room-temperature superconductor limits</li>
+      <li><b>SPORT</b>Chelsea beat PSG 1–0 on late Buurman goal</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bottom">
+  <div class="mapbox">
+    <h6>WHERE THE DAY HAPPENED</h6>
+    <svg viewBox="0 0 296 88" aria-hidden="true">
+      <rect width="296" height="88" fill="#e8eef7"/>
+      <g fill="#b9c6d8">
+        <path d="M18 22 L58 14 L72 24 L60 44 L34 46 L16 36 Z"/>
+        <path d="M78 26 L110 20 L128 30 L118 52 L88 50 L76 38 Z"/>
+        <path d="M136 20 L176 14 L196 26 L186 44 L150 46 L134 34 Z"/>
+        <path d="M200 30 L240 22 L262 32 L250 52 L214 50 L198 40 Z"/>
+        <path d="M60 58 L96 54 L108 66 L92 78 L64 74 L56 66 Z"/>
+        <path d="M238 62 L272 58 L280 70 L258 80 L236 74 Z"/>
+      </g>
+      <g fill="#b91c1c">
+        <circle cx="40" cy="30" r="3.5"/><circle cx="96" cy="34" r="3.5"/><circle cx="160" cy="28" r="3.5"/>
+        <circle cx="222" cy="36" r="3.5"/><circle cx="84" cy="64" r="3.5"/><circle cx="256" cy="68" r="3.5"/>
+        <circle cx="120" cy="40" r="3"/><circle cx="186" cy="38" r="3"/>
+      </g>
+      <text x="8" y="84" font-family="Arial" font-size="8" fill="#555">8 STORY HOTSPOTS · AMERICAS · EUROPE · MIDEAST · ASIA-PACIFIC</text>
+    </svg>
+  </div>
+  <div class="tlbox">
+    <h6>THE DAY UNFOLDS — UTC</h6>
+    <svg viewBox="0 0 380 88" preserveAspectRatio="none" aria-hidden="true">
+      <line x1="10" y1="44" x2="370" y2="44" stroke="#111" stroke-width="2"/>
+      <g font-family="Arial" font-size="9" fill="#555">
+        <text x="4" y="62">00:00</text><text x="80" y="62" text-anchor="middle">06:00</text><text x="150" y="62" text-anchor="middle">12:00</text>
+        <text x="220" y="62" text-anchor="middle">18:00</text><text x="290" y="62" text-anchor="middle">21:00</text><text x="376" y="62" text-anchor="end">23:00</text>
+      </g>
+      <g font-family="Arial" font-size="9.5" font-weight="700" fill="#111">
+        <circle cx="34" cy="44" r="5" fill="#b91c1c"/><text x="6" y="30">GTA VI LIVE</text>
+        <circle cx="110" cy="44" r="5" fill="#1d4ed8"/><text x="110" y="30" text-anchor="middle">VOYAGER</text>
+        <circle cx="185" cy="44" r="5" fill="#b91c1c"/><text x="185" y="30" text-anchor="middle">IPO DEBUT</text>
+        <circle cx="245" cy="44" r="5" fill="#1d4ed8"/><text x="245" y="76" text-anchor="middle">UN VERDICT</text>
+        <circle cx="300" cy="44" r="5" fill="#b91c1c"/><text x="300" y="30" text-anchor="middle">JEFFRIES</text>
+        <circle cx="348" cy="44" r="5" fill="#1d4ed8"/><text x="348" y="76" text-anchor="middle">GAZA OP</text>
+      </g>
+    </svg>
+  </div>
+  <div class="numbox">
+    <h6>DAY IN NUMBERS</h6>
+    <div class="nums">
+      <div class="n"><b>$81.3bn</b><span>Largest IPO ever</span></div>
+      <div class="n"><b>$190.4m</b><span>Record Van Gogh</span></div>
+      <div class="n"><b>1 light-day</b><span>Voyager 1 distance</span></div>
+      <div class="n"><b>25th</b><span>Canada FIFA ranking</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>All stories first reported Thursday 19 November 2026 &nbsp;·&nbsp; Compiled from the day's wire and newspaper reports</footer>
+
+<pre id="diag">OVERFLOW: pending</pre>
+<script>
+  window.addEventListener('load', function () {
+    var bad = [];
+    document.querySelectorAll('.fit').forEach(function (el) {
+      if (el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1) {
+        bad.push(el.tagName + '.' + (el.className || '').split(' ')[0] + ':' + (el.textContent || '').trim().slice(0, 30));
+      }
+    });
+    document.getElementById('diag').textContent = bad.length === 0 ? 'OVERFLOW: none' : 'OVERFLOW: ' + bad.length + ' elements: ' + bad.slice(0, 6).join(' | ');
+  });
+</script>
+</body>
+</html>
