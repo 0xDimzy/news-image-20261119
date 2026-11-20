@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Thursday 19 November 2026 — the world in one day</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1024px;height:1024px;overflow:hidden;background:#f6f1e6;color:#16130e;
+ font-family:Georgia,'DejaVu Serif',serif;display:flex;flex-direction:column}
+.sans{font-family:Arial,'DejaVu Sans',sans-serif}
+.kicker{display:flex;justify-content:space-between;align-items:center;padding:4px 14px 3px;
+ font-family:Arial,'DejaVu Sans',sans-serif;font-size:10.5px;letter-spacing:2.2px;font-weight:bold}
+.kicker .r{color:#8a1f1f}
+.titlebar{display:flex;align-items:center;gap:14px;padding:2px 14px 4px;border-bottom:3px double #16130e}
+.cal{flex:0 0 74px;text-align:center;border:2px solid #16130e;background:#fffdf7}
+.cal .m{background:#8a1f1f;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;padding:2px 0}
+.cal .d{font-size:28px;font-weight:bold;line-height:1.05}
+.cal .w{font-family:Arial,sans-serif;font-size:10px;letter-spacing:1.5px;padding-bottom:3px}
+h1{font-size:40px;line-height:1;letter-spacing:-.5px;white-space:nowrap}
+.sub{color:#8a1f1f;font-style:italic;font-size:14.5px;margin-top:2px;white-space:nowrap}
+.regions{display:flex;font-family:Arial,sans-serif;font-size:10px;font-weight:bold;color:#fff;letter-spacing:.5px}
+.regions div{padding:3px 0;text-align:center}
+.timeline{display:flex;background:#14213d;color:#e8ecf4;padding:3px 10px;gap:0}
+.timeline .lab{font-family:Arial,sans-serif;font-size:10px;font-weight:bold;letter-spacing:1.5px;color:#f2c14e;
+ writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;padding-right:6px}
+.tl{flex:1;text-align:center;border-left:1px solid #3a4a6b;padding:0 4px}
+.tl:first-of-type{border-left:none}
+.tl .t{font-family:Arial,sans-serif;font-size:11.5px;font-weight:bold;color:#f2c14e}
+.tl .w{font-size:9px;line-height:1.1}
+.stats{display:flex;border-bottom:2px solid #16130e;background:#fffdf7}
+.stat{flex:1;text-align:center;padding:3px 2px 4px;border-left:1px solid #d8d0bd}
+.stat:first-child{border-left:none}
+.stat .n{font-size:20px;font-weight:bold;line-height:1}
+.stat .c{font-family:Arial,sans-serif;font-size:9px;color:#4a4436;line-height:1.12;margin-top:1px}
+.row{display:flex;gap:8px;padding:5px 10px 0}
+.card{flex:1;border:1.5px solid #16130e;background:#fffdf7;display:flex;flex-direction:column}
+.card .art{height:40px;border-bottom:1.5px solid #16130e;position:relative;overflow:hidden}
+.card .art svg{width:100%;height:100%;display:block}
+.tag{position:absolute;top:5px;left:5px;background:#16130e;color:#f6f1e6;font-family:Arial,sans-serif;
+ font-size:9.5px;font-weight:bold;letter-spacing:1px;padding:2px 6px}
+.st{position:absolute;top:5px;right:5px;font-family:Arial,sans-serif;font-size:8.5px;font-weight:bold;
+ letter-spacing:1px;padding:2px 5px;color:#fff}
+.st.rep{background:#2e7d32}.st.clm{background:#b26a00}.st.fct{background:#455a7a}
+.card .tx{padding:5px 8px 6px}
+.kick{font-family:Arial,sans-serif;font-size:10px;font-weight:bold;letter-spacing:1.2px;color:#8a1f1f}
+.num{display:inline-block;background:#8a1f1f;color:#fff;border-radius:50%;width:16px;height:16px;
+ text-align:center;line-height:16px;font-size:10.5px;font-family:Arial,sans-serif;font-weight:bold;vertical-align:-3px}
+h2{font-size:19px;line-height:1.08;margin:2px 0 3px}
+.dek{font-size:11.3px;line-height:1.24;color:#2c2820}
+.src{font-family:Arial,sans-serif;font-size:9px;color:#6b6455;margin-top:3px}
+.small .art{height:26px}
+.small h2{font-size:13.5px}
+.small .dek{font-size:9.3px;line-height:1.16}
+.small .tx{padding:4px 7px 5px}
+.bottom{display:flex;gap:8px;padding:6px 10px 0;flex:1;min-height:0}
+.mapbox{flex:0 0 300px;border:1.5px solid #16130e;background:#e9f0f4;position:relative;padding:6px;overflow:hidden}
+.mapbox .mh{font-family:Arial,sans-serif;font-size:10.5px;font-weight:bold;letter-spacing:1.5px}
+.mapbox .mn{font-family:Arial,sans-serif;font-size:9px;color:#4a4436;margin-top:2px}
+#map{position:relative;width:100%;height:128px;margin-top:3px}
+.pin{position:absolute;width:15px;height:15px;border-radius:50%;background:#8a1f1f;color:#fff;
+ font-family:Arial,sans-serif;font-size:9px;font-weight:bold;text-align:center;line-height:15px;
+ transform:translate(-50%,-50%);border:1px solid #fff}
+.dot{position:absolute;width:7px;height:7px;border-radius:50%;transform:translate(-50%,-50%)}
+.legend{display:flex;flex-wrap:wrap;gap:3px 8px;font-family:Arial,sans-serif;font-size:8.5px;margin-top:4px}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;vertical-align:-1px;margin-right:2px}
+.also{flex:1;border:1.5px solid #16130e;background:#fffdf7;padding:6px 9px;overflow:hidden}
+.also h3{font-family:Arial,sans-serif;font-size:11.5px;letter-spacing:1.5px;border-bottom:1.5px solid #16130e;padding-bottom:2px}
+.briefs{display:flex;gap:12px;margin-top:3px}
+.briefs ul{flex:1;list-style:none}
+.briefs li{font-size:8.4px;line-height:1.14;margin-bottom:0.8px}
+.briefs b{font-family:Arial,sans-serif;font-size:10px}
+.briefs .n{color:#8a1f1f;font-family:Arial,sans-serif;font-weight:bold;font-size:10px}
+.briefs .s{color:#6b6455;font-family:Arial,sans-serif;font-size:8.5px}
+.datecheck{margin:5px 10px 0;border:2px solid #8a1f1f;background:#fdf3e3;padding:3px 9px;font-size:10px;line-height:1.24}
+.datecheck b{color:#8a1f1f;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px}
+.foot{padding:4px 14px 6px;font-family:Arial,sans-serif;font-size:8.5px;color:#4a4436;text-align:center}
+</style></head><body>
+<div class="kicker"><span>THE WORLD IN ONE DAY</span><span class="r">43 STORIES · 7 REGIONS · 13 DRAWN · ONE PAGE</span></div>
+<div class="titlebar">
+ <div class="cal"><div class="m">NOVEMBER</div><div class="d">19</div><div class="w">THURSDAY · 2026</div></div>
+ <div><h1>Thursday 19 November 2026</h1>
+ <div class="sub">Trump, Xi and Putin share one table · World Court finds genocide in Myanmar · biggest IPO ever debuts</div></div>
+</div>
+<div class="regions">
+ <div style="flex:8;background:#b34700">ASIA 8</div><div style="flex:11;background:#2e5e8c">EUROPE 11</div>
+ <div style="flex:4;background:#7a4a9e">MIDDLE EAST 4</div><div style="flex:6;background:#2e7d32">AFRICA 6</div>
+ <div style="flex:6;background:#8a1f1f">AMERICAS 6</div><div style="flex:5;background:#0f766e">OCEANIA 5</div>
+ <div style="flex:3;background:#555">GLOBAL 3</div>
+</div>
+<div class="timeline"><div class="lab">THE DAY IN UTC</div>
+ <div class="tl"><div class="t">00:00</div><div class="w">Auckland: GTA VI unlocks</div></div>
+ <div class="tl"><div class="t">00:30</div><div class="w">Canberra: jobless rate up to 4.9%</div></div>
+ <div class="tl"><div class="t">02:05</div><div class="w">Riyadh: Houthi missile hits tower</div></div>
+ <div class="tl"><div class="t">08:16</div><div class="w">Shenzhen: three leaders sit down</div></div>
+ <div class="tl"><div class="t">10:00</div><div class="w">The Hague: genocide ruling</div></div>
+ <div class="tl"><div class="t">13:30</div><div class="w">Washington: jobless claims 203,000</div></div>
+ <div class="tl"><div class="t">16:48</div><div class="w">New York: Anthropic's first trade</div></div>
+ <div class="tl"><div class="t">21:00</div><div class="w">New York: Dow closes −1,101</div></div>
+</div>
+<div class="stats">
+ <div class="stat"><div class="n">3</div><div class="c">presidents at one table, Shenzhen</div></div>
+ <div class="stat"><div class="n">9–6</div><div class="c">World Court genocide vote</div></div>
+ <div class="stat"><div class="n">$81.3bn</div><div class="c">raised by Anthropic, largest IPO on record</div></div>
+ <div class="stat"><div class="n">$120bn</div><div class="c">adaptation-aid goal cut at COP31</div></div>
+ <div class="stat"><div class="n">551,864</div><div class="c">sit South Korea's college entrance exam</div></div>
+ <div class="stat"><div class="n">200,000</div><div class="c">evacuated ahead of Cyclone Akvan</div></div>
+</div>
+<div class="row">
+ <div class="card">
+  <div class="art"><svg viewBox="0 0 320 104" preserveAspectRatio="none">
+   <rect width="320" height="104" fill="#1b2a4a"/>
+   <rect x="18" y="14" width="52" height="34" fill="#b22234"/><rect x="18" y="14" width="24" height="18" fill="#3c3b6e"/>
+   <rect x="134" y="14" width="52" height="34" fill="#de2910"/><circle cx="146" cy="24" r="5" fill="#ffde00"/>
+   <rect x="250" y="14" width="52" height="34" fill="#fff"/><rect x="250" y="25" width="52" height="11" fill="#0039a6"/><rect x="250" y="36" width="52" height="12" fill="#d52b1e"/>
+   <rect x="10" y="72" width="300" height="10" fill="#6b4a2f"/>
+   <circle cx="44" cy="60" r="9" fill="#f2c14e"/><circle cx="160" cy="60" r="9" fill="#f2c14e"/><circle cx="276" cy="60" r="9" fill="#f2c14e"/>
+   <text x="160" y="98" text-anchor="middle" fill="#e8ecf4" font-family="Arial" font-size="10" font-weight="bold" letter-spacing="1.5">FIRST TRILATERAL SUMMIT · APEC 2026</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">1</span> SHENZHEN · SUMMIT</div>
+  <h2>Trump, Xi and Putin hold first three-way summit</h2>
+  <div class="dek">Ninety minutes at APEC; a "Declaration Toward Peace" on nuclear risk. Ukraine not in the text.</div>
+  <div class="src">Reuters · AP · Xinhua</div></div>
+ </div>
+ <div class="card">
+  <div class="art"><svg viewBox="0 0 320 104" preserveAspectRatio="none">
+   <rect width="320" height="104" fill="#dfe9f2"/>
+   <polygon points="160,8 60,34 260,34" fill="#7a4a2f"/>
+   <rect x="70" y="34" width="180" height="6" fill="#5d3a24"/>
+   <rect x="82" y="40" width="12" height="38" fill="#a9744f"/><rect x="112" y="40" width="12" height="38" fill="#a9744f"/>
+   <rect x="142" y="40" width="12" height="38" fill="#a9744f"/><rect x="172" y="40" width="12" height="38" fill="#a9744f"/>
+   <rect x="202" y="40" width="12" height="38" fill="#a9744f"/><rect x="232" y="40" width="12" height="38" fill="#a9744f"/>
+   <rect x="64" y="78" width="192" height="7" fill="#5d3a24"/>
+   <rect x="244" y="44" width="58" height="28" fill="#8a1f1f"/>
+   <text x="273" y="65" text-anchor="middle" fill="#fff" font-family="Arial" font-size="18" font-weight="bold">9–6</text>
+   <text x="160" y="99" text-anchor="middle" fill="#33475e" font-family="Arial" font-size="10.5" font-weight="bold" letter-spacing="2">WORLD COURT · THE HAGUE</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">2</span> THE HAGUE · LAW</div>
+  <h2>World Court: Myanmar committed genocide</h2>
+  <div class="dek">By 9 votes to 6 the ICJ found Myanmar guilty of genocide against the Rohingya. No appeal.</div>
+  <div class="src">ICJ · AP · Al Jazeera</div></div>
+ </div>
+ <div class="card">
+  <div class="art"><svg viewBox="0 0 320 104" preserveAspectRatio="none">
+   <rect width="320" height="104" fill="#0e2a1e"/>
+   <polyline points="20,84 70,76 115,80 160,58 205,62 250,34 300,22" fill="none" stroke="#4ade80" stroke-width="4"/>
+   <circle cx="300" cy="22" r="6" fill="#f2c14e"/>
+   <rect x="20" y="86" width="34" height="12" fill="#2e7d32"/><rect x="70" y="80" width="34" height="18" fill="#2e7d32"/>
+   <rect x="120" y="84" width="34" height="14" fill="#2e7d32"/><rect x="170" y="70" width="34" height="28" fill="#2e7d32"/>
+   <rect x="220" y="52" width="34" height="46" fill="#2e7d32"/><rect x="268" y="30" width="34" height="68" fill="#f2c14e"/>
+   <text x="24" y="30" fill="#e8f5e9" font-family="Arial" font-size="17" font-weight="bold">ANT · NASDAQ</text>
+   <text x="24" y="48" fill="#9ccc9c" font-family="Arial" font-size="10.5">IPO PRICE $83 · FIRST DAY</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">3</span> NEW YORK · MARKETS</div>
+  <h2>Anthropic debuts in the biggest IPO ever</h2>
+  <div class="dek">Priced at $83, the Claude maker raised $81.3bn, valued near $1.5tn. Dow fell 1,101.</div>
+  <div class="src">AP · Nasdaq</div></div>
+ </div>
+</div>
+<div class="row">
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#23283b"/>
+   <rect x="12" y="30" width="26" height="34" fill="#4a5578"/><rect x="48" y="22" width="26" height="42" fill="#5b6a94"/>
+   <rect x="84" y="34" width="26" height="30" fill="#4a5578"/><rect x="120" y="26" width="26" height="38" fill="#5b6a94"/>
+   <rect x="156" y="32" width="26" height="32" fill="#4a5578"/>
+   <g fill="#f2c14e"><rect x="56" y="30" width="5" height="5"/><rect x="66" y="40" width="5" height="5"/><rect x="128" y="34" width="5" height="5"/><rect x="20" y="38" width="5" height="5"/></g>
+   <path d="M150 10 l16 6 -16 6 -4 -6z" fill="#e8ecf4"/><circle cx="150" cy="16" r="3" fill="#e8ecf4"/>
+   <text x="8" y="13" fill="#f2c14e" font-family="Arial" font-size="8.5" font-weight="bold">KYIV · DAY ATTACK</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">4</span> KYIV · WAR</div>
+  <h2>Russian drones hit Kyiv by day</h2>
+  <div class="dek">1 dead, 5 hurt; embassies damaged.</div>
+  <div class="src">Kyiv Independent · AP</div></div>
+ </div>
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#7fb3c8"/>
+   <rect y="44" width="200" height="20" fill="#2e6b8a"/>
+   <rect x="30" y="30" width="110" height="14" fill="#8a1f1f"/><rect x="118" y="22" width="18" height="10" fill="#f6f1e6"/>
+   <polygon points="30,44 140,44 128,52 44,52" fill="#5d1414"/>
+   <circle cx="160" cy="52" r="6" fill="#16130e"/><circle cx="178" cy="56" r="5" fill="#16130e"/>
+   <path d="M60 30 q4 -12 12 -14 M78 30 q2 -10 10 -12" stroke="#e07b39" stroke-width="3" fill="none"/>
+   <text x="8" y="13" fill="#0f3550" font-family="Arial" font-size="9" font-weight="bold">STRAIT OF HORMUZ</text>
+  </svg><span class="st clm">CLAIM</span></div>
+  <div class="tx"><div class="kick"><span class="num">5</span> HORMUZ · SHIPPING</div>
+  <h2>Iran says tankers hit mines, caught fire</h2>
+  <div class="dek">Tehran claims three tankers, none named.</div>
+  <div class="src">Iran Intl · AA</div></div>
+ </div>
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#dff0e2"/>
+   <circle cx="42" cy="32" r="22" fill="#2e7d32"/><path d="M26 24 q16 -8 32 0 M24 38 q18 8 36 0" stroke="#dff0e2" stroke-width="3" fill="none"/>
+   <rect x="86" y="10" width="9" height="34" rx="4" fill="#fff" stroke="#8a1f1f" stroke-width="2"/>
+   <rect x="88.5" y="22" width="4" height="20" fill="#c62828"/><circle cx="90.5" cy="48" r="7" fill="#c62828"/>
+   <text x="108" y="28" fill="#16130e" font-family="Arial" font-size="10" font-weight="bold">DRAFT DEAL</text>
+   <text x="108" y="43" fill="#16130e" font-family="Arial" font-size="10.5" font-weight="bold">FOSSIL FUELS</text>
+   <line x1="106" y1="39" x2="192" y2="39" stroke="#c62828" stroke-width="3"/>
+   <text x="108" y="57" fill="#8a1f1f" font-family="Arial" font-size="8.5" font-weight="bold">$120BN AID CUT</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">6</span> ANTALYA · CLIMATE</div>
+  <h2>COP31 draft drops fossil fuels</h2>
+  <div class="dek">Slimmer text also cuts the $120bn adaptation goal. Talks end Friday.</div>
+  <div class="src">Reuters · AFP</div></div>
+ </div>
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#bfe0ea"/>
+   <path d="M100 32 m-24 0 a24 24 0 1 1 24 24 a17 17 0 1 0 -17 -17 a10 10 0 1 1 10 10" fill="none" stroke="#2e6b8a" stroke-width="5"/>
+   <circle cx="100" cy="32" r="4" fill="#0f3550"/>
+   <path d="M150 44 q20 6 34 2 l-4 12 q-16 4 -30 -2z" fill="#e8dcc0"/>
+   <text x="8" y="13" fill="#0f3550" font-family="Arial" font-size="9" font-weight="bold">CYCLONE AKVAN</text>
+   <text x="8" y="58" fill="#0f3550" font-family="Arial" font-size="8.5">BAY OF BENGAL</text>
+  </svg><span class="st fct">FORECAST</span></div>
+  <div class="tx"><div class="kick"><span class="num">7</span> ODISHA · STORM</div>
+  <h2>Cyclone Akvan nears India's coast</h2>
+  <div class="dek">200,000+ evacuated; landfall due Friday.</div>
+  <div class="src">IMD · Reuters</div></div>
+ </div>
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#2b3a55"/>
+   <rect y="46" width="200" height="18" fill="#16233a"/>
+   <rect x="6" y="38" width="188" height="5" fill="#c9d4e4"/>
+   <rect x="36" y="20" width="6" height="18" fill="#c9d4e4"/><rect x="94" y="20" width="6" height="18" fill="#c9d4e4"/><rect x="152" y="20" width="6" height="18" fill="#c9d4e4"/>
+   <path d="M42 22 Q68 34 94 22 M100 22 Q126 34 152 22" stroke="#c9d4e4" stroke-width="2" fill="none"/>
+   <path d="M118 30 l5 -10 4 8 9 -3 -6 8 6 6 -10 -1 -3 9 -4 -9 -10 1 7 -7z" fill="#f2c14e"/>
+   <text x="8" y="13" fill="#e8ecf4" font-family="Arial" font-size="9" font-weight="bold">KERCH BRIDGE</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">8</span> CRIMEA · WAR</div>
+  <h2>Ukraine hits Kerch bridge again</h2>
+  <div class="dek">Third strike in a week halts trains to Russia.</div>
+  <div class="src">Euronews · Reuters</div></div>
+ </div>
+</div>
+<div class="row">
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#1c2440"/>
+   <g fill="#f2c14e"><circle cx="20" cy="10" r="1.6"/><circle cx="60" cy="7" r="1.4"/><circle cx="120" cy="9" r="1.6"/><circle cx="170" cy="6" r="1.4"/><circle cx="190" cy="14" r="1.5"/></g>
+   <rect x="78" y="16" width="44" height="48" fill="#39466e"/>
+   <polygon points="78,16 100,4 122,16" fill="#39466e"/>
+   <g fill="#f2c14e"><rect x="86" y="24" width="6" height="6"/><rect x="100" y="24" width="6" height="6"/><rect x="86" y="38" width="6" height="6"/><rect x="108" y="38" width="6" height="6"/></g>
+   <path d="M8 8 Q60 2 92 20" stroke="#e07b39" stroke-width="2.5" fill="none"/>
+   <path d="M92 20 l10 4 -9 3z" fill="#e07b39"/>
+   <text x="8" y="60" fill="#e8ecf4" font-family="Arial" font-size="8.5" font-weight="bold">OVER RIYADH · 02:05 UTC</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">9</span> RIYADH · WAR</div>
+  <h2>Houthi missile damages Riyadh tower</h2>
+  <div class="dek">Floors of the PIF tower hit; no injuries reported.</div>
+  <div class="src">Reuters · Al-Monitor</div></div>
+ </div>
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#eef2f7"/>
+   <rect x="10" y="10" width="52" height="34" fill="#fff" stroke="#bbb"/>
+   <circle cx="36" cy="27" r="9" fill="#cd2e3a"/><path d="M27 27 a9 9 0 0 1 18 0z" fill="#0047a0"/>
+   <rect x="84" y="38" width="66" height="8" rx="3" fill="#6b4a2f" transform="rotate(-18 117 42)"/>
+   <rect x="136" y="18" width="22" height="13" rx="3" fill="#8a5a33" transform="rotate(-18 147 24)"/>
+   <rect x="92" y="52" width="56" height="6" rx="3" fill="#6b4a2f"/>
+   <rect x="118" y="6" width="76" height="17" fill="none" stroke="#c62828" stroke-width="2.5"/>
+   <text x="156" y="18" text-anchor="middle" fill="#c62828" font-family="Arial" font-size="10" font-weight="bold">OVERTURNED</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">10</span> SEOUL · JUSTICE</div>
+  <h2>Korea's top court clears ex-PM Han</h2>
+  <div class="dek">Han Duck-soo's martial-law conviction is overturned.</div>
+  <div class="src">AP · Yonhap</div></div>
+ </div>
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#2a1245"/>
+   <rect x="8" y="34" width="20" height="30" fill="#4a2a7a"/><rect x="34" y="26" width="20" height="38" fill="#5d3a94"/>
+   <rect x="146" y="30" width="20" height="34" fill="#4a2a7a"/><rect x="172" y="22" width="20" height="42" fill="#5d3a94"/>
+   <circle cx="100" cy="40" r="15" fill="#f2a541"/>
+   <rect x="66" y="42" width="68" height="22" rx="10" fill="#e8ecf4"/>
+   <rect x="76" y="49" width="14" height="4" fill="#16130e"/><rect x="81" y="44" width="4" height="14" fill="#16130e"/>
+   <circle cx="118" cy="49" r="3.4" fill="#c62828"/><circle cx="126" cy="55" r="3.4" fill="#2e7d32"/>
+   <text x="78" y="16" text-anchor="middle" fill="#fff" font-family="Arial" font-size="11" font-weight="bold">GTA VI · OUT NOW</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">11</span> WORLDWIDE · GAMES</div>
+  <h2>GTA VI goes on sale after 13 years</h2>
+  <div class="dek">Unlocks at midnight, NZ first; $79.99 on PS5 and Xbox, no PC yet.</div>
+  <div class="src">Reuters · ABC</div></div>
+ </div>
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#fdf3e3"/>
+   <rect x="14" y="8" width="132" height="16" fill="#f2c14e"/>
+   <text x="80" y="20" text-anchor="middle" fill="#16130e" font-family="Arial" font-size="9.5" font-weight="bold">PARO NACIONAL</text>
+   <g><circle cx="34" cy="42" r="6" fill="#8a5a33"/><rect x="29" y="48" width="10" height="14" fill="#2e5e8c"/>
+   <circle cx="58" cy="40" r="6" fill="#5d3a24"/><rect x="53" y="46" width="10" height="16" fill="#c62828"/>
+   <circle cx="82" cy="43" r="6" fill="#8a5a33"/><rect x="77" y="49" width="10" height="13" fill="#2e7d32"/>
+   <circle cx="106" cy="40" r="6" fill="#5d3a24"/><rect x="101" y="46" width="10" height="16" fill="#f2a541"/>
+   <circle cx="130" cy="42" r="6" fill="#8a5a33"/><rect x="125" y="48" width="10" height="14" fill="#7a4a9e"/>
+   <circle cx="154" cy="40" r="6" fill="#5d3a24"/><rect x="149" y="46" width="10" height="16" fill="#0f766e"/>
+   <circle cx="176" cy="43" r="6" fill="#8a5a33"/><rect x="171" y="49" width="10" height="13" fill="#b34700"/></g>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">12</span> BOGOTÁ · LABOUR</div>
+  <h2>Colombia's unions hold national strike</h2>
+  <div class="dek">Teachers and workers march in three cities over an economic law.</div>
+  <div class="src">AFP · Infobae</div></div>
+ </div>
+ <div class="card small">
+  <div class="art"><svg viewBox="0 0 200 64" preserveAspectRatio="none">
+   <rect width="200" height="64" fill="#fff8ee"/>
+   <rect x="26" y="34" width="30" height="24" fill="#2e5e8c"/><rect x="66" y="28" width="30" height="30" fill="#2e5e8c"/>
+   <rect x="106" y="20" width="30" height="38" fill="#c62828"/>
+   <polyline points="20,40 80,32 140,16 180,10" fill="none" stroke="#c62828" stroke-width="3"/>
+   <text x="41" y="30" text-anchor="middle" fill="#33475e" font-family="Arial" font-size="9">4.7%</text>
+   <text x="116" y="15" text-anchor="middle" fill="#c62828" font-family="Arial" font-size="11" font-weight="bold">4.9%</text>
+   <text x="142" y="52" fill="#33475e" font-family="Arial" font-size="8" font-weight="bold">JOBLESS RATE</text>
+   <text x="142" y="61" fill="#33475e" font-family="Arial" font-size="7.5">5-YEAR HIGH</text>
+  </svg><span class="st rep">REPORTED</span></div>
+  <div class="tx"><div class="kick"><span class="num">13</span> CANBERRA · ECONOMY</div>
+  <h2>Australia's jobless rate jumps to 4.9%</h2>
+  <div class="dek">Highest since 2021, up from 4.7%.</div>
+  <div class="src">ABC · ABS</div></div>
+ </div>
+</div>
+<div class="bottom">
+ <div class="mapbox">
+  <div class="mh">WHERE IT HAPPENED</div>
+  <div class="mn">Red numbers mark stories 1–13; coloured dots mark the briefs. Positions approximate.</div>
+  <div id="map"></div>
+  <div class="legend">
+   <span><i style="background:#b34700"></i>Asia</span><span><i style="background:#2e5e8c"></i>Europe</span>
+   <span><i style="background:#7a4a9e"></i>Middle East</span><span><i style="background:#2e7d32"></i>Africa</span>
+   <span><i style="background:#8a1f1f"></i>Americas</span><span><i style="background:#0f766e"></i>Oceania</span>
+   <span><i style="background:#555"></i>Global</span>
+  </div>
+ </div>
+ <div class="also">
+  <h3>ALSO ON THURSDAY 19 NOVEMBER — 30 MORE STORIES</h3>
+  <div class="briefs">
+   <ul>
+    <li><span class="n">14</span> <b>Berlin</b> — Europe seeks a winter truce; Putin says no. <span class="s">Euronews</span></li>
+    <li><span class="n">15</span> <b>Shenzhen</b> — Xi urges a ban on all nuclear arms. <span class="s">Al Jazeera</span></li>
+    <li><span class="n">16</span> <b>Shenzhen</b> — APEC adopts Shenzhen Declaration on digital trade. <span class="s">Reuters</span></li>
+    <li><span class="n">17</span> <b>Taipei</b> — Stocks fall 4.4%; short-selling curbs follow. <span class="s">Reuters</span></li>
+    <li><span class="n">18</span> <b>Seoul</b> — 551,864 sit the Suneung exam. <span class="s">Yonhap</span></li>
+    <li><span class="n">19</span> <b>Jakarta</b> — Asset-seizure law passes after 18 years. <span class="s">Kompas · Antara</span></li>
+    <li><span class="n">20</span> <b>Gaza</b> — Israeli armour past Yellow Line; Hamas cries breach. <span class="s">BBC</span></li>
+    <li><span class="n">21</span> <b>Krasnodar</b> — Kyiv says it struck two oil refineries. <span class="s">Euronews</span></li>
+    <li><span class="n">22</span> <b>Kursk</b> — Morning drone attack injures 11, the governor says. <span class="s">Reuters</span></li>
+    <li><span class="n">23</span> <b>Paris</b> — Mélenchon could win, says justice minister. <span class="s">Reuters</span></li>
+    <li><span class="n">24</span> <b>Brussels</b> — The EU delays its methane rules two years. <span class="s">Euronews</span></li>
+   </ul>
+   <ul>
+    <li><span class="n">25</span> <b>UK</b> — An inquiry finds the yacht Bayesian was vulnerable to wind. <span class="s">RNZ</span></li>
+    <li><span class="n">26</span> <b>Zurich</b> — Two rivals will challenge FIFA's Infantino. <span class="s">ABC</span></li>
+    <li><span class="n">27</span> <b>Rome</b> — Author Corrado Augias dies aged 91. <span class="s">Euronews</span></li>
+    <li><span class="n">28</span> <b>Mogadishu</b> — Somalia expels UAE ambassador. <span class="s">Al Jazeera</span></li>
+    <li><span class="n">29</span> <b>Sudan</b> — A court sentences the absent RSF chief to death. <span class="s">AP</span></li>
+    <li><span class="n">30</span> <b>Pretoria</b> — The central bank holds its rate at 7.25%. <span class="s">SABC</span></li>
+    <li><span class="n">31</span> <b>Nairobi</b> — Marathon champion Jepchirchir banned 3 years. <span class="s">ABC</span></li>
+    <li><span class="n">32</span> <b>Canaries</b> — A record 11,000 migrants arrive in 15 days. <span class="s">Africanews</span></li>
+    <li><span class="n">33</span> <b>Florida</b> — Flooding forces Broward schools to shut again. <span class="s">AP · CBS</span></li>
+    <li><span class="n">34</span> <b>San Salvador</b> — Bukele registers for an unprecedented third term. <span class="s">Reuters</span></li>
+    <li><span class="n">35</span> <b>Wellington</b> — A court rules pay-equity cuts broke rights law. <span class="s">RNZ</span></li>
+   </ul>
+   <ul>
+    <li><span class="n">36</span> <b>Tonga</b> — A drought emergency takes effect. <span class="s">RNZ</span></li>
+    <li><span class="n">37</span> <b>Cook Islands</b> — Cyclone Xavier weakens to category 4. <span class="s">RNZ</span></li>
+    <li><span class="n">38</span> <b>Northland, NZ</b> — 19 sperm whales die in a mass stranding. <span class="s">RNZ</span></li>
+    <li><span class="n">39</span> <b>Johannesburg</b> — South Africa beat Bangladesh by 9 wickets. <span class="s">AP</span></li>
+    <li><span class="n">40</span> <b>Greenland</b> — Denmark backs an Arctic pact with the US; parliament votes 109–0. <span class="s">AP</span></li>
+    <li><span class="n">41</span> <b>Science</b> — Earth's missing billion years are explained. <span class="s">Nature</span></li>
+    <li><span class="n">42</span> <b>Space</b> — A red giant is seen swallowing a Sun-sized star. <span class="s">Nature</span></li>
+    <li><span class="n">43</span> <b>Washington</b> — US jobless claims rise to 203,000. <span class="s">Reuters</span></li>
+   </ul>
+  </div>
+ </div>
+</div>
+<div class="datecheck"><b>DATE CHECK ✓</b> Every story on this page happened, or was first reported, on Thursday 19 November 2026. <b>LEFT OUT AS OTHER DAYS' NEWS:</b> 18 NOV: Voyager 1 one light-day · EU's €45bn Ukraine loan · Nvidia results · Van Gogh's $190.4m sale. 20 NOV: COP31's scheduled close · Cyclone Akvan's landfall. <b>CLAIM</b> = one side's account, not independently verified.</div>
+<div class="foot">Disputed claims are attributed, not stated as fact. Sources: Reuters, AP, AFP, BBC, Al Jazeera, ICJ, IMD, Euronews, ABC, RNZ, Yonhap, Nature. Original drawings.</div>
+<script>
+var rows=[
+"   ####  ####          ###    #####################      ",
+"  #############       ###############################     ",
+" ###############     ################################    ",
+"  #############       ## ##########################      ",
+"   ##########          #########################        ",
+"    ########            #######################  ##     ",
+"     ######              #####################  ####    ",
+"      ####                ###################   ######   ",
+"      ###                  #################    ####    ",
+"     #####                  ###############      ##     ",
+"    #######                  #############              ",
+"     #####                    ###########               ",
+"      ###                      #########                ",
+"      ##                        #######                 ",
+"      ##                         #####                  ",
+"      #                           ###                   "];
+var m=document.getElementById('map'),W=m.clientWidth,H=m.clientHeight;
+var cw=W/56,ch=H/16;
+for(var r=0;r<16;r++)for(var c=0;c<56;c++)if(rows[r][c]=='#'){
+ var d=document.createElement('div');d.className='dot';
+ d.style.left=(c*cw+cw/2)+'px';d.style.top=(r*ch+ch/2)+'px';
+ d.style.background='#7fa3b8';d.style.width='5px';d.style.height='5px';m.appendChild(d);}
+function pin(n,x,y){var p=document.createElement('div');p.className='pin';p.textContent=n;
+ p.style.left=x+'%';p.style.top=y+'%';m.appendChild(p);}
+function dot(x,y,col){var p=document.createElement('div');p.className='dot';p.style.background=col;
+ p.style.left=x+'%';p.style.top=y+'%';m.appendChild(p);}
+pin(1,79,34);pin(2,47,26);pin(3,24,32);pin(4,55,24);pin(5,60,36);pin(6,56,33);pin(7,74,42);
+pin(8,57,22);pin(9,58,40);pin(10,83,30);pin(11,50,8);pin(12,27,58);pin(13,85,78);
+var A='#b34700',E='#2e5e8c',M='#7a4a9e',F='#2e7d32',S='#8a1f1f',O='#0f766e',G='#555';
+dot(49,24,E);dot(79,36,A);dot(80,35,A);dot(82,33,A);dot(84,31,A);dot(78,52,A);dot(58,38,M);
+dot(60,24,E);dot(59,22,E);dot(47,25,E);dot(46,26,E);dot(45,24,E);dot(48,25,E);dot(48,27,E);
+dot(59,52,F);dot(57,46,F);dot(54,74,F);dot(57,56,F);dot(43,36,F);dot(23,42,S);dot(19,48,S);
+dot(92,82,O);dot(96,66,O);dot(95,72,O);dot(91,84,O);dot(53,70,F);dot(31,14,S);dot(50,10,G);
+dot(50,6,G);dot(22,34,S);
+</script>
+</body></html>
